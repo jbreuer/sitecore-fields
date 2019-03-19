@@ -588,9 +588,9 @@ namespace Sitecore.Shell.Applications.ContentEditor
             MediaUrlOptions thumbnailOptions = MediaUrlOptions.GetThumbnailOptions(mediaItem);
             if (!int.TryParse(mediaItem.InnerItem["Height"], out num))
             {
-                num = 128;
+                num = 250;
             }
-            thumbnailOptions.Height = Math.Min(128, num);
+            thumbnailOptions.Height = Math.Min(250, num);
             thumbnailOptions.MaxWidth = 640;
             thumbnailOptions.UseDefaultIcon = true;
             src = MediaManager.GetMediaUrl(mediaItem, thumbnailOptions);
